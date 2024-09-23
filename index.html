@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh</title>
+
+    <!-- Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Daisy UI and Tailwind CDN Link -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary_bg_color: "#F9F7F3",
+              button_color: "#B4F461",
+              primary_text: "#111111",
+              secondary_text: "rgba(17, 17, 17, 0.7)",
+            },
+            fontFamily: {
+              Lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-Lexend w-11/12 mx-auto border-emerald-300 border">
+    <main>
+      <!-- header section -->
+      <header class="w-full bg-primary_bg_color pb-6 border-blue-900 border">
+        <!-- navbar starts here -->
+        <div class="navbar w-11/12 mx-auto my-6 border-black border">
+          <div class="navbar-start">
+            <button class="btn bg-button_color px-7 text-lg text-primary_text">
+              Blog
+            </button>
+          </div>
+          <div class="navbar-center gap-5">
+            <img src="./assets/logo.png" alt="" />
+            <h1 class="text-lg lg:text-xl font-semibold text-primary_text">
+              Donate Bangladesh
+            </h1>
+          </div>
+          <div class="navbar-end gap-3 hidden lg:flex">
+            <img src="assets/coin.png" alt="" srcset="" />
+            <div class="text-secondary_text lg:flex text-xl font-medium gap-3">
+              <h3>0</h3>
+              <p>BDT</p>
+            </div>
+          </div>
+        </div>
+      </header>
+    </main>
+  </body>
+</html>
