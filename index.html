@@ -40,9 +40,9 @@
       };
     </script>
   </head>
-  <body class="font-Lexend w-11/12 mx-auto border-green-500 border">
+  <body class="font-Lexend w-11/12 mx-auto">
     <!-- header section -->
-    <header class="w-full bg-primary_bg_color border-red-500 border">
+    <header class="sticky top-0 w-full bg-primary_bg_color">
       <!-- navbar starts here -->
       <div class="navbar w-11/12 mx-auto my-6 p-6">
         <div class="navbar-start hidden lg:flex">
@@ -68,7 +68,9 @@
         </div>
       </div>
       <!-- Banner Section Starts Here -->
-      <section class="w-full bg-white justify-center pt-14 pb-4 flex gap-5">
+      <section
+        class="w-full bg-white justify-center pt-14 pb-4 flex gap-5 border-b-[#1111114D] border"
+      >
         <!-- Donation Button -->
         <button
           id="donationBtn"
@@ -167,6 +169,19 @@
       </div>
       <!-- History Section -->
       <div id="historyList" class="w-11/12 mx-auto hidden"></div>
+      <!-- Modal -->
+      <button class="btn" onclick="my_modal_5.showModal()"></button>
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer class="w-full h-36 bg-primary_bg_color mx-auto mt-6"></footer>
     <script src="./js_file/index.js"></script>
