@@ -42,7 +42,9 @@
   </head>
   <body class="font-Lexend w-11/12 mx-auto">
     <!-- header section -->
-    <header class="sticky top-0 w-full bg-primary_bg_color">
+    <header
+      class="sticky top-0 backdrop-filter: blur() w-full bg-primary_bg_color"
+    >
       <!-- navbar starts here -->
       <div class="navbar w-11/12 mx-auto my-6 p-6">
         <div class="navbar-start hidden lg:flex">
@@ -87,7 +89,7 @@
         </button>
       </section>
     </header>
-    <main>
+    <main class="mt-14">
       <!-- Donation Cards Section -->
       <div
         id="card"
@@ -170,18 +172,7 @@
       <!-- History Section -->
       <div id="historyList" class="w-11/12 mx-auto hidden"></div>
       <!-- Modal -->
-      <button class="btn" onclick="my_modal_5.showModal()"></button>
-      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-        <div class="modal-box">
-          <h3 class="text-lg font-bold">Hello!</h3>
-          <p class="py-4">Press ESC key or click the button below to close</p>
-          <div class="modal-action">
-            <form method="dialog">
-              <button class="btn">Close</button>
-            </form>
-          </div>
-        </div>
-      </dialog>
+      <div id="modal w-1/2 hidden mx-auto"></div>
     </main>
     <footer class="w-full h-36 bg-primary_bg_color mx-auto mt-6"></footer>
     <script src="./js_file/index.js"></script>

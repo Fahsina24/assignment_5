@@ -28,6 +28,20 @@ donateNowButton.addEventListener("click", function () {
     donationAmount <= currentAmount &&
     donationAmount > 0
   ) {
+    alert("Congrates.You Have Donated For HumanKind Successfully");
+    // Try to do modal section
+    modalContainer = document.getElementById("modal");
+    const modalContent = document.createElement("div");
+    modalContent.className =
+      "modal-box bg-white rounded-lg my-6 p-6 border-[#1111114D] border flex justify-center items-center text-center";
+    modalContent.innerHTML = `<h2 class="text-black font-semibold">
+       Congrates
+       </h2>
+    <img src="assets/coin.png" alt="" />
+    <p class="text-gray-600 font-sm">Date: You Have Donated for HumanKind </p >
+    <p>Successfully</p>
+    <button id="close-modal" class="btn">Close Confirmation</button>`;
+
     let donateMoney = parseFloat(donateMoneyElement.innerText);
     const newAmount = currentAmount - donationAmount;
     currentAmountElement.innerText = newAmount.toFixed(2);
@@ -43,7 +57,7 @@ donateNowButton.addEventListener("click", function () {
     historyItem.innerHTML = `<p class="text-black font-semibold">${donationAmount} Taka is Donated for ${
       titleElement.innerText
     }</p>
-  <p class="text-gray-600 font-sm">Date: ${new Date()} </p >`;
+   <p class="text-gray-600 font-sm">Date: ${new Date()} </p >`;
     const historyContainer = document.getElementById("historyList");
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
   } else {
