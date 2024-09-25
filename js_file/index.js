@@ -18,25 +18,38 @@ const historyContainerElement = document.getElementById("historyList");
 // });
 
 donateNowButton.addEventListener("click", function () {
-  const donationAmount = parseFloat(donationAmountElement.value);
+  // validation donationAmount
+  const donationInput = donationAmountElement.value;
+  const donationAmount = Number(donationInput);
   const currentAmount = parseFloat(currentAmountElement.innerText);
-  let donateMoney = parseFloat(donateMoneyElement.innerText);
-  const newAmount = currentAmount - donationAmount;
-  currentAmountElement.innerText = newAmount.toFixed(2);
-  donateMoney += donationAmount;
-  donateMoneyElement.innerText = donateMoney.toFixed(2);
-  donateValueElement.innerText = donateMoney.toFixed(2);
-  //creating div for history section
+  if (
+    donationInput !== "" &&
+    !isNaN(donationAmount) &&
+    donationAmount <= currentAmount &&
+    donationAmount > 0
+  ) {
+    let donateMoney = parseFloat(donateMoneyElement.innerText);
+    const newAmount = currentAmount - donationAmount;
+    currentAmountElement.innerText = newAmount.toFixed(2);
+    donateMoney += donationAmount;
+    donateMoneyElement.innerText = donateMoney.toFixed(2);
+    donateValueElement.innerText = donateMoney.toFixed(2);
 
-  const historyItem = document.createElement("div");
-  historyItem.className =
-    "bg-white rounded-lg my-6 p-6 border-[#1111114D] border";
-  historyItem.innerHTML = `<p class="text-black font-semibold">${donationAmount} Taka is Donated for ${
-    titleElement.innerText
-  }</p>
+    //creating div for history section
+
+    const historyItem = document.createElement("div");
+    historyItem.className =
+      "bg-white rounded-lg my-6 p-6 border-[#1111114D] border";
+    historyItem.innerHTML = `<p class="text-black font-semibold">${donationAmount} Taka is Donated for ${
+      titleElement.innerText
+    }</p>
   <p class="text-gray-600 font-sm">Date: ${new Date()} </p >`;
-  const historyContainer = document.getElementById("historyList");
-  historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+    const historyContainer = document.getElementById("historyList");
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+  } else {
+    alert("Invalid Input");
+    return;
+  }
 });
 
 // History Tab Section
