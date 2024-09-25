@@ -30,7 +30,7 @@
               primary_bg_color: "#F9F7F3",
               button_color: "#B4F461",
               primary_text: "#111111",
-              secondary_text: "rgba(17, 17, 17, 0.7)",
+              secondary_text: "#4B4B4B",
             },
             fontFamily: {
               Lexend: "Lexend",
@@ -46,7 +46,9 @@
       <!-- navbar starts here -->
       <div class="navbar w-11/12 mx-auto my-6 p-6">
         <div class="navbar-start hidden lg:flex">
-          <button class="btn bg-button_color px-7 text-lg text-primary_text">
+          <button
+            class="btn bg-button_color px-7 text-lg text-primary_text hover:bg-button_color"
+          >
             Blog
           </button>
         </div>
@@ -59,18 +61,25 @@
         <div class="navbar-end gap-3 hidden lg:flex">
           <img src="assets/coin.png" alt="" srcset="" />
           <div class="text-secondary_text lg:flex text-xl font-medium gap-1">
-            <h3>1000</h3>
+            <!-- Current Money Section -->
+            <h3 id="currentMoneyInAccount">4000</h3>
             <p>BDT</p>
           </div>
         </div>
       </div>
       <!-- Banner Section Starts Here -->
       <section class="w-full bg-white justify-center pt-14 pb-4 flex gap-5">
-        <button class="btn bg-button_color px-7 text-lg text-primary_text">
+        <!-- Donation Button -->
+        <button
+          id="donationBtn"
+          class="btn bg-button_color px-7 text-lg text-primary_text hover:bg-button_color"
+        >
           Donation
         </button>
+        <!-- History Button -->
         <button
-          class="btn bg-white border-[#1111114D] px-7 text-lg text-secondary_text"
+          id="historyBtn"
+          class="btn bg-white border-[#1111114D] transition-none px-7 text-lg text-secondary_text hover:bg-white"
         >
           History
         </button>
@@ -101,7 +110,8 @@
                   <div
                     class="text-secondary_text flex text-xl font-medium gap-1 pr-2"
                   >
-                    <h3>0</h3>
+                    <!-- Donate Section Money -->
+                    <h3 id="donateMoneyUpdate">0</h3>
                     <p>BDT</p>
                   </div>
                 </div>
@@ -134,12 +144,16 @@
                 in supporting the relief efforts and making a positive impact on
                 the lives of those in need.
               </p>
+              <!-- Donation Input Button -->
               <input
+                id="donationInputBtn"
                 type="text"
                 placeholder="Write Donation Amount"
                 class="input input-bordered w-full mt-4 py-8"
               />
+              <!-- Donate Now Button -->
               <button
+                id="donateNowBtn"
                 class="w-full rounded-md bg-button_color mt-4 py-4 text-xl text-primary_text font-semibold"
               >
                 Donate Now
