@@ -12,6 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Font Awesome CDN link -->
+    <script
+      src="https://kit.fontawesome.com/5124a7fe28.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Daisy UI and Tailwind CDN Link -->
 
     <link
@@ -47,9 +54,32 @@
     >
       <!-- navbar starts here -->
       <div class="navbar w-11/12 mx-auto my-6 p-6">
-        <div class="navbar-start hidden lg:flex">
+        <div class="navbar-start lg:flex">
+          <div
+            class="lg:hidden dropdown bg-white rounded-full border-footerFontColor border-solid border-2"
+          >
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-4xl"
+            >
+              <li
+                class="text-lg text-primary_text hover:bg-button_color rounded-md"
+              >
+                <a>Blog</a>
+              </li>
+              <li
+                class="flex flex-row gap-0 text-primary_text hover:bg-button_color rounded-md"
+              >
+                <p id="mainMoney">Money: 4000 BDT</p>
+              </li>
+            </ul>
+          </div>
+
           <button
-            class="btn bg-button_color px-7 text-lg text-primary_text hover:bg-button_color"
+            class="btn bg-button_color px-7 text-lg hidden lg:flex text-primary_text hover:bg-button_color"
           >
             Blog
           </button>
@@ -136,7 +166,7 @@
                     <div
                       class="text-secondary_text flex text-xl font-medium gap-1 pr-2"
                     >
-                      <!-- Donation Current Money Button -->
+                      <!-- Donation Current Money Button Small Device -->
                       <h3 id="donateMoneyValue">0</h3>
                       <p>BDT</p>
                     </div>
@@ -169,12 +199,30 @@
           </div>
         </div>
       </div>
+
       <!-- History Section -->
       <div id="historyList" class="w-11/12 mx-auto hidden"></div>
       <!-- Modal -->
-      <div id="modal w-1/2 hidden mx-auto"></div>
+      <dialog id="modalContent" class="modal flex flex-col">
+        <div class="modal-box justify-center text-center">
+          <h1 class="text-3xl font-bold text-black">Congrates</h1>
+          <div class="flex justify-center items-center mt-6">
+            <img src="assets/coin.png" alt="" height="50" width="50" />
+          </div>
+          <p class="text-gray-600 font-xl mt-6">
+            You Have Donated for HumanKind
+          </p>
+          <p class="text-xl font-bold text-black mt-6">Successfully</p>
+          <div class="modal-action justify-center">
+            <form method="dialog">
+              <button class="btn px-8 text-lg">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
     <footer class="w-full h-36 bg-primary_bg_color mx-auto mt-6"></footer>
+    <script src="./js_file/function.js"></script>
     <script src="./js_file/index.js"></script>
   </body>
 </html>
