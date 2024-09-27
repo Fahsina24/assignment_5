@@ -1,18 +1,3 @@
-// Common Function
-function getElementValueById(id) {
-  const btnValue = parseFloat(document.getElementById(id).value);
-  return btnValue;
-}
-
-function getElementInnerTextById(id) {
-  const textValue = parseFloat(document.getElementById(id).innerText);
-  return textValue;
-}
-
-function getCard(id) {
-  return document.getElementById(id);
-}
-
 function inputValidation() {
   let currentAmount = getElementInnerTextById("currentMoneyInAccount");
   let updatedDonateMoney = getElementInnerTextById("donateMoneyUpdate");
