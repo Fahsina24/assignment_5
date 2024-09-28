@@ -34,11 +34,13 @@ function inputValidation() {
     historyItem.innerHTML = `<p class="text-black font-semibold">${donationAmount} Taka is Donated for ${
       titleElement.innerText
     }</p>
-     <p class="text-gray-600 font-sm">Date: ${new Date()} </p >`;
+     <p class="bg-[#F9F7F3] text-gray-600 font-sm mt-4 ml-0 p-2 rounded-lg">Date: ${new Date()} </p >`;
     const historyContainer = document.getElementById("historyList");
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+    document.getElementById("donationInputBtn").value = "";
   } else {
     alert("Invalid Input");
+    document.getElementById("donationInputBtn").value = "";
     return;
   }
 }

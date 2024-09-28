@@ -27,7 +27,6 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- Tailwind Configuration -->
     <script>
       tailwind.config = {
@@ -68,7 +67,7 @@
               <li
                 class="text-lg text-primary_text hover:bg-button_color rounded-md"
               >
-                <a>Blog</a>
+                <a href="blog.html">Blog</a>
               </li>
               <li
                 class="flex flex-row gap-0 text-primary_text hover:bg-button_color rounded-md"
@@ -77,12 +76,13 @@
               </li>
             </ul>
           </div>
-
-          <button
-            class="btn bg-button_color px-7 text-lg hidden lg:flex text-primary_text hover:bg-button_color"
-          >
-            Blog
-          </button>
+          <a href="blog.html">
+            <button
+              class="btn bg-button_color px-7 text-lg hidden lg:flex text-primary_text hover:bg-button_color"
+            >
+              Blog
+            </button>
+          </a>
         </div>
         <div class="gap-3 justify-center w-full lg:navbar-center">
           <img src="./assets/logo.png" alt="" />
@@ -151,7 +151,9 @@
                   </div>
                 </div>
               </button>
-              <div class="flex gap-4 justify-between lg:justify-start">
+              <div
+                class="flex flex-wrap gap-4 justify-between lg:justify-start"
+              >
                 <h2
                   class="font-bold text-2xl lg:text-xl lg:px-0 lg:font-semibold text-primary_text mt-4"
                 >
@@ -229,12 +231,16 @@
                   </div>
                 </div>
               </button>
-              <div class="flex gap-4 justify-between lg:justify-start">
+              <div
+                class="flex flex-wrap gap-4 justify-between lg:justify-start"
+              >
                 <h2
                   class="font-bold text-2xl lg:text-xl lg:px-0 lg:font-semibold text-primary_text mt-4"
                 >
                   Donate for
-                  <span id="eventTitle2"> Flood Relief in Feni,Bangladesh</span>
+                  <span id="eventTitle2">
+                    Flood Relief in Feni, Bangladesh</span
+                  >
                 </h2>
                 <button
                   class="btn bg-[#1111110D] border-[#1111114D] mt-4 text-secondary_text w-fit flex lg:hidden h-1/2"
@@ -309,7 +315,9 @@
                   </div>
                 </div>
               </button>
-              <div class="flex gap-4 justify-between lg:justify-start">
+              <div
+                class="flex flex-wrap gap-4 justify-between lg:justify-start"
+              >
                 <h2
                   class="font-bold text-2xl lg:text-xl lg:px-0 lg:font-semibold text-primary_text mt-4"
                 >
