@@ -2,17 +2,19 @@ function inputValidation2() {
   let currentAmount = getElementInnerTextById("currentMoneyInAccount");
   let updatedDonateMoney = getElementInnerTextById("donateMoneyUpdate2");
   let amountToDonate = getElementValueById("donationInputBtn2");
+  let stringAmount = document.getElementById("donationInputBtn2").value;
   let mainMoneyElement = document.getElementById("mainMoney");
   let titleElement = document.getElementById("eventTitle2");
   const donateMoneyElement = getCard("donateMoneyUpdate2");
   const donateValueElement = getCard("donateMoneyValue2");
   const currentAmountElement = getCard("currentMoneyInAccount");
-
+  const isNumeric = /^[0-9]+$/.test(stringAmount);
   let donationInput = amountToDonate;
   const donationAmount = amountToDonate;
   if (
     donationInput !== "" &&
     donationAmount <= currentAmount &&
+    isNumeric &&
     donationAmount > 0
   ) {
     //Modal Visibility section
@@ -37,10 +39,10 @@ function inputValidation2() {
      <p class="bg-[#F9F7F3] text-gray-600 font-sm mt-4 ml-0 p-2 rounded-lg">Date: ${new Date()} </p >`;
     const historyContainer = document.getElementById("historyList");
     historyContainer.insertBefore(historyItem, historyContainer.firstChild);
-    document.getElementById("donationInputBtn").value = "";
+    document.getElementById("donationInputBtn2").value = "";
   } else {
     alert("Invalid Input");
-    document.getElementById("donationInputBtn").value = "";
+    document.getElementById("donationInputBtn2").value = "";
     return;
   }
 }

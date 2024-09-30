@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Page</title>
-        <!-- Google Font Link -->
+    <!-- Google Font Link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -45,10 +45,10 @@
       };
     </script>
   </head>
- <body class="font-Lexend w-11/12 mx-auto">
+  <body class="font-Lexend w-11/12 mx-auto">
     <!-- header section -->
     <header
-      class="sticky top-0 backdrop-filter: blur() w-full bg-primary_bg_color"
+      class="sticky top-0 z-10 backdrop-filter: blur() w-full bg-primary_bg_color"
     >
       <!-- navbar starts here -->
       <div class="navbar w-11/12 mx-auto my-6 p-6">
@@ -79,7 +79,7 @@
             <button
               class="btn bg-button_color px-7 text-lg hidden lg:flex text-primary_text hover:bg-button_color"
             >
-            Home
+              Home
             </button>
           </a>
         </div>
@@ -99,43 +99,94 @@
         </div>
       </div>
       <!-- Banner Section -->
-      <div class="bg-white flex flex-row gap-2 h-20">
-        <h3 class="pt-8 pl-2 text-2xl text-black font-semibold">Important FAQ</h3>
-        <p class="mt-7 px-2 border-black border rounded-full text-2xl h-fit">
-          <i class=" fa-solid fa-question"></i></p>
+      <div
+        class="w-full bg-white pt-4 pb-8 flex gap-5 border-b-[#1111114D] border"
+      >
+        <h3 class="pt-8 pl-2 text-2xl text-black font-semibold">
+          Important FAQ
+        </h3>
+        <p class="mt-8 px-2 border-black border rounded-full text-2xl h-fit">
+          <i class="fa-solid fa-question"></i>
+        </p>
       </div>
-      <!-- Main Section -->
-       <main class="bg-white">
-          <div class="collapse collapse-arrow bg-primary_bg_color border-black mb-2">
-  <input type="radio" name="my-accordion-2" checked="checked" />
-  <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)? </div>
-  <div class="collapse-content">
-    <p>iii</p>
-  </div>
-</div>
-          <div class="collapse collapse-arrow bg-primary_bg_color border-black mb-2">
-  <input type="radio" name="my-accordion-2" checked="checked" />
-  <div class="collapse-title text-xl font-medium">How do you select an element from the DOM? </div>
-  <div class="collapse-content">
-    <p>iii</p>
-  </div>
-</div>
-          <div class="collapse collapse-arrow bg-primary_bg_color border-black mb-2">
-  <input type="radio" name="my-accordion-2" checked="checked" />
-  <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why it is useful? </div>
-  <div class="collapse-content">
-    <p>iii</p>
-  </div>
-</div>
-          <div class="collapse collapse-arrow bg-primary_bg_color border-black mb-2">
-  <input type="radio" name="my-accordion-2" checked="checked" />
-  <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
-  <div class="collapse-content">
-    <p></p>
-  </div>
-</div>
-
-
-       </main>
-     </body>
+    </header>
+    <!-- Main Section -->
+    <main class="mt-8">
+      <div
+        class="collapse collapse-arrow bg-primary_bg_color border--[#111111D] border-1 mb-8"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium text-primary_text">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>
+            DOM means Document Object Model. It creates object for the document
+            for a webpage. Html makes the basic structure, Css makes the design
+            and javascript makes it effective by using DOM which helps to excess
+            it dynamically.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow bg-primary_bg_color border-[#111111D] border-2 mb-4"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium text-primary_text">
+          How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            5 types of methods are possible for selecting an element or elements
+            by using DOM such as getElementById(), getElementsByClassName(),
+            getElementsByTagName(), querySelector(), and querySelectorAll(). For
+            selecting an particular element unique ID can be used by
+            getElementById() methods which can easily able to excess that
+            particular content from the html file.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow bg-primary_bg_color border-[#111111D] border-2 mb-4"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div
+          class="collapse-title text-xl font-medium text-primary_texttext-primary_text"
+        >
+          What is event delegation in the context of the DOM, and why it is
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>
+            This technique helps to handle multiple element by using a single
+            event listener to its parent element and performing some tasks. It
+            is important because if I use it, I do not need to attach multiple
+            event listeners for particular tasks. Moreover, it can make the code
+            more readable and fewer code lines as well by delegating the html
+            document.
+          </p>
+        </div>
+      </div>
+      <div
+        class="collapse collapse-arrow bg-primary_bg_color border-[#111111D] border-2 mb-4"
+      >
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium text-primary_text">
+          How do you manipulate an element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>
+            For manipulating an elements attributes some methods can be used
+            such as setAttribute(to something in the html file),getAttribute,
+            removeAttribute and so on. While for manipulating styles css style
+            tag can be used while the property need to be set as camelCase for
+            example - if I have a h4 tagged element and I want to make the
+            background color blue using DOM, I need to use
+            document.getElementsByTagName("h4").style.backgroundColor = "blue"
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

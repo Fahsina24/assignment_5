@@ -1,18 +1,21 @@
 function inputValidation() {
   let currentAmount = getElementInnerTextById("currentMoneyInAccount");
   let updatedDonateMoney = getElementInnerTextById("donateMoneyUpdate");
+  let stringAmount = document.getElementById("donationInputBtn").value;
   let amountToDonate = getElementValueById("donationInputBtn");
   const mainMoneyElement = document.getElementById("mainMoney");
   let titleElement = document.getElementById("eventTitle");
   const donateMoneyElement = getCard("donateMoneyUpdate");
   const donateValueElement = getCard("donateMoneyValue");
   const currentAmountElement = getCard("currentMoneyInAccount");
+  const isNumeric = /^[0-9]+$/.test(stringAmount);
   let money = currentAmount;
   let donationInput = amountToDonate;
   const donationAmount = amountToDonate;
   if (
     donationInput !== "" &&
     donationAmount <= currentAmount &&
+    isNumeric &&
     donationAmount > 0
   ) {
     //Modal Visibility section
